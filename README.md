@@ -90,35 +90,19 @@ The exported CSV includes `canvas_user_id` in addition to the requested student 
 
 ## iPhone / mobile use
 
-**Don't download the files onto the phone** (not from Drive, OneDrive, Email, or AirDrop). A downloaded copy is just a local file with no web address, and iOS sometimes displays a local HTML file as a static, non-interactive preview — the page loads and looks right, but none of the buttons do anything, even with the phone's JavaScript setting on.
+If you're grading on a phone, this is everything you need to do:
 
-**Instead, open the app's real web link** in Safari:
+1. Open **Safari**.
+2. Go to: https://claude.ai/artifact/SgmXCoVBR1j5B8Nky5Wpwq
+3. Enter the Class ID, pick your roster and rubric CSVs, tap **Load files**.
 
-https://claude.ai/artifact/SgmXCoVBR1j5B8Nky5Wpwq
+That's it. The CSVs are picked on your phone and never leave the browser — same privacy as on a computer, nothing shared with anyone else grading from the same link.
 
-That's a genuine webpage (never downloaded), so it always runs correctly. The roster and rubric CSVs are still picked on the phone itself and never leave the browser — this link changes nothing about privacy, only how the app is reached.
+Optional: tap Safari's Share icon → **Add to Home Screen**, so it opens like an app with no address bar.
 
-Optional, to make it feel like an app: in Safari, tap the Share icon → **Add to Home Screen**. That adds an icon that opens the page full-screen with no address bar.
+**Do not download `index.html` or the CSVs onto the phone** (not via Drive, OneDrive, Email, or AirDrop). A downloaded copy is just a local file, and iOS can silently fail to run it — the page looks fine but no button does anything.
 
-**Each phone's scores stay separate** — nothing is shared or synced between different people's phones just because they use the same link, same as loading local files on a computer.
-
-**Keeping this link up to date**: this published link is a separate copy of `index.html`, not the same file as this folder's. Editing `index.html` here does not change the link — whoever maintains it needs to ask Claude to republish it with the latest version.
-
-**Landscape / rotating the screen**: if the grading table feels cramped, turn the phone sideways. If it doesn't rotate, iOS's rotation lock is probably on: Settings → Control Center → **Customize Controls** → add **Rotation Lock** (on some iOS versions this is labeled **Portrait Orientation Lock**) → then swipe down from the top-right corner of the screen and tap that icon off.
-
-### Self-hosting instead (optional, for whoever owns the link long-term)
-
-The link above is one way to get `index.html` a real web address. GitHub Pages is another — free, and not dependent on asking anyone to republish it.
-
-Uploading `index.html` to a GitHub repo is **not** enough by itself — clicking the file there just shows its source code, and downloading it recreates the exact same "static preview, buttons don't work" problem as any other download. GitHub Pages has to be turned on separately:
-
-1. In the repo, click **Settings**.
-2. Left sidebar → **Pages**.
-3. Under "Build and deployment" → Source: **Deploy from a branch**.
-4. Branch: **main**, folder: **/ (root)** → **Save**.
-5. Wait about a minute, refresh that Pages screen — it shows the live URL, e.g. `https://yourname.github.io/reponame/`.
-
-That URL — not the repo page, not a downloaded file — is what actually works on a phone.
+**Rotating to landscape**: if the grading table feels cramped, turn the phone sideways. If it won't rotate, iOS's rotation lock is probably on: Settings → Control Center → **Customize Controls** → add **Rotation Lock** (also labeled **Portrait Orientation Lock**) → swipe down from the top-right corner and tap that icon off.
 
 ### Mobile / iPhone layout
 The grading screen is optimized for narrow phone screens:
@@ -127,3 +111,21 @@ The grading screen is optimized for narrow phone screens:
 - score-entry columns use fixed, compact widths so all rubric columns stay visible without horizontal scrolling;
 - other wide tables (Students, Groups, Rubrics) scroll horizontally instead of squeezing their columns unreadably thin;
 - validation messages appear in their own row below the grading table (never squeezed beside it), and name the specific student and rubric item, plus whether the problem is the data type (not a whole number) or the value being out of the rubric's 0–max range — e.g. "Ball, Jessie — Analysis: out of range (must be 0–5)."
+
+## Maintaining the phone link (not needed to grade presentations)
+
+Everyone grading presentations only needs the "iPhone / mobile use" section above. This part is only for whoever keeps that link working.
+
+The phone link is a separate published copy of `index.html`, not this folder's file. Editing `index.html` here does not update it — ask Claude to republish it with the latest version after making changes.
+
+**Alternative: host it yourself with GitHub Pages** — free, and not dependent on asking anyone to republish anything.
+
+Uploading `index.html` to a GitHub repo is not enough by itself: clicking the file there only shows its source code, and downloading it has the same broken-on-iPhone problem as any other download. GitHub Pages has to be turned on separately:
+
+1. In the repo, click **Settings**.
+2. Left sidebar → **Pages**.
+3. Under "Build and deployment" → Source: **Deploy from a branch**.
+4. Branch: **main**, folder: **/ (root)** → **Save**.
+5. Wait about a minute, refresh that Pages screen — it shows the live URL, e.g. `https://gchang1020.github.io/ggrader/`.
+
+Share only that URL with faculty — never the repo page itself, and never a downloaded copy of the file.
