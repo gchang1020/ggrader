@@ -607,7 +607,7 @@ async function loadFiles() {
     scores = {};
     $("loadMessage").innerHTML =
       '<span class="success">Files loaded successfully</span> ' +
-      '<span class="small">No previously saved scores found for this exact roster + rubric — starting a new score sheet</span>';
+      '<span class="small">No saved scores found for key=\'roster + rubric\', so start a new score sheet</span>';
     setStatus(`${roster.length} students · ${groups.length} groups · ${rubrics.length} rubrics`);
     renderAll();
   } catch (e) {
