@@ -650,18 +650,15 @@ function renderAll() {
 // Renders the "Current data" summary card on the Setup tab (file names and roster/group/rubric counts)
 function renderSummary() {
   const today = new Date();
-  const dateStr = today.getFullYear() + 
-	"-" + String(today.getMonth()+1).padStart(2,"0") + 
-	"-" + String(today.getDate()).padStart(2,"0");
-
+  const dateStr = today.getFullYear() + "-" + String(today.getMonth()+1).padStart(2,"0") + "-" + String(today.getDate()).padStart(2,"0");
   $("dataSummary").innerHTML = `
     <div><b>Date:</b> ${dateStr}</div>
     <div><b>Class:</b> ${escapeHtml(classId || "—")}</div>
     <div><b>Roster:</b> ${escapeHtml(loadedRosterName || "—")}</div>
     <div><b>Rubric:</b> ${escapeHtml(loadedRubricName || "—")}</div>
-    <div><b><a href="#" onclick="showSection('students')"; return false;>Students:</a></b> ${roster.length}</div>
-    <div><b><a href="#" onclick="showSection('groups')"; return false;>Groups:</a></b> ${groups.length}</div>
-    <div><b><a href="#" onclick="showSection('rubrics')"; return false;>Rubrics:</a></b> ${rubrics.length}</div>
+    <div><b>Students:</b> ${roster.length}</div>
+    <div><b>Groups:</b> ${groups.length}</div>
+    <div><b>Rubrics:</b> ${rubrics.length}</div>
   `;
 }
 
