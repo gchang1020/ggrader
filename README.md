@@ -106,6 +106,20 @@ Optional, to make it feel like an app: in Safari, tap the Share icon → **Add t
 
 **Landscape / rotating the screen**: if the grading table feels cramped, turn the phone sideways. If it doesn't rotate, iOS's rotation lock is probably on: Settings → Control Center → **Customize Controls** → add **Rotation Lock** (on some iOS versions this is labeled **Portrait Orientation Lock**) → then swipe down from the top-right corner of the screen and tap that icon off.
 
+### Self-hosting instead (optional, for whoever owns the link long-term)
+
+The link above is one way to get `index.html` a real web address. GitHub Pages is another — free, and not dependent on asking anyone to republish it.
+
+Uploading `index.html` to a GitHub repo is **not** enough by itself — clicking the file there just shows its source code, and downloading it recreates the exact same "static preview, buttons don't work" problem as any other download. GitHub Pages has to be turned on separately:
+
+1. In the repo, click **Settings**.
+2. Left sidebar → **Pages**.
+3. Under "Build and deployment" → Source: **Deploy from a branch**.
+4. Branch: **main**, folder: **/ (root)** → **Save**.
+5. Wait about a minute, refresh that Pages screen — it shows the live URL, e.g. `https://yourname.github.io/reponame/`.
+
+That URL — not the repo page, not a downloaded file — is what actually works on a phone.
+
 ### Mobile / iPhone layout
 The grading screen is optimized for narrow phone screens:
 - presentation groups are always listed one per row (this is true on desktop too, to keep the list easy to scan);
