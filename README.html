@@ -17,11 +17,12 @@
 <li><code>login_id</code>, <code>sections</code> — Optional. Carried through if present; not used for grading logic.</li>
 </ul>
 <p>Minimal example:</p>
-<p><code>csv
-name,group_name
-Ball Jessie,Team A
-Headlam Camille,Team A
-Crivella Tyler,Team B</code></p>
+<ul>
+<li><code>name,group_name</code></li>
+<li><code>Ball Jessie,Team A</code></li>
+<li><code>Headlam Camille,Team A</code></li>
+<li><code>Crivella Tyler,Team B</code></li>
+</ul>
 <p><strong>Rubric CSV</strong> — one row per rubric item:</p>
 <ul>
 <li><code>index</code> — <strong>Required.</strong> Display order / label for the rubric item (e.g. <code>1</code>, <code>2</code>, ...).</li>
@@ -29,10 +30,11 @@ Crivella Tyler,Team B</code></p>
 <li><code>max points</code> — <strong>Required.</strong> The maximum score for that item; scores must be a whole number from 0 to this value.</li>
 </ul>
 <p>Minimal example (this is what <code>rubric.csv</code> already contains):</p>
-<p><code>csv
-index,rubric text,max points
-1,Content and accuracy,5
-2,Analysis,5</code></p>
+<ul>
+<li><code>index,rubric text,max points</code></li>
+<li><code>1,Content and accuracy,5</code></li>
+<li><code>2,Analysis,5</code></li>
+</ul>
 <p>If a required column is missing from either file, <strong>Load files</strong> will refuse to load it and tell you which column is missing, rather than loading with wrong or blank data.</p>
 <h2>Use</h2>
 <ol>

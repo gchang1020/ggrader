@@ -23,12 +23,10 @@ Any CSV that has these columns will work — it doesn't have to come from Canvas
 
 Minimal example:
 
-```csv
-name,group_name
-Ball Jessie,Team A
-Headlam Camille,Team A
-Crivella Tyler,Team B
-```
+- `name,group_name`
+- `Ball Jessie,Team A`
+- `Headlam Camille,Team A`
+- `Crivella Tyler,Team B`
 
 **Rubric CSV** — one row per rubric item:
 
@@ -38,11 +36,9 @@ Crivella Tyler,Team B
 
 Minimal example (this is what `rubric.csv` already contains):
 
-```csv
-index,rubric text,max points
-1,Content and accuracy,5
-2,Analysis,5
-```
+- `index,rubric text,max points`
+- `1,Content and accuracy,5`
+- `2,Analysis,5`
 
 If a required column is missing from either file, **Load files** will refuse to load it and tell you which column is missing, rather than loading with wrong or blank data.
 
